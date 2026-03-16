@@ -1,0 +1,11 @@
+# requirements.txt
+
+streamlit
+pandas
+requests
+textblob
+scikit-learn
+matplotlib
+pymongo[srv]
+python-dotenv
+bcrypt

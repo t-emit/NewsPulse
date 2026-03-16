@@ -1,0 +1,157 @@
+/* Modern Dark Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main app background */
+.stApp {
+    background-color: #0f172a; /* Slate 900 */
+    color: #f8fafc; /* Slate 50 */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: rgba(30, 41, 59, 0.7); /* Slate 800 with transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Glowing Title Effect for Main Headers */
+h1 {
+    background: -webkit-linear-gradient(45deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 24px rgba(56, 189, 248, 0.2);
+}
+
+/* Paragraph text */
+p, span, label, div {
+    color: #cbd5e1; /* Slate 300 */
+}
+
+/* Input fields */
+input, textarea, div[data-baseweb="select"] > div, div[data-baseweb="textarea"] > div, div[data-baseweb="input"] > div {
+    background-color: #1e293b !important; /* Slate 800 */
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, div[data-baseweb="select"] > div:focus-within {
+    border-color: #38bdf8 !important; /* Sky 400 */
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Fix dropdown listbox options in Dark Mode */
+.stSelectbox div[data-baseweb="select"] > div, 
+div[data-baseweb="popover"] *,
+div[role="listbox"] > li {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+div[role="listbox"] > li:hover, div[role="listbox"] > li[aria-selected="true"] {
+    background-color: #334155 !important;
+    color: #38bdf8 !important;
+}
+
+/* Buttons */
+.stButton > button, .stDownloadButton > button {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: #ffffff !important;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    min-height: 45px !important;
+}
+
+.stButton > button:hover, .stDownloadButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    color: #ffffff !important;
+}
+
+.stButton > button:active, .stDownloadButton > button:active {
+    transform: translateY(1px);
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color: rgba(30, 41, 59, 0.8) !important;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Metrics Cards / Elements */
+[data-testid="metric-container"] {
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-testid="metric-container"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Markdown links */
+a {
+    color: #38bdf8 !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #7dd3fc !important;
+    text-decoration: underline;
+}
+
+/* DataFrame/Tables */
+.dataframe {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    font-weight: 600 !important;
+}
+
+td {
+    background-color: #0f172a !important;
+    color: #cbd5e1 !important;
+    border-bottom: 1px solid #1e293b !important;
+}
+
+/* Fix button svg fill */
+.stButton > button svg, .stDownloadButton > button svg {
+    fill: #ffffff !important;
+}
